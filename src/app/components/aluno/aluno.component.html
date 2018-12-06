@@ -1,0 +1,36 @@
+<br>
+<div>
+    <span>Nome: </span><input [(ngModel)]="nome" id="nome" name="nome" type="text">
+    <br>
+    <span>Mátricula: </span><input [(ngModel)]="mat" id="matricula" name="mat" type="text">
+    <br>
+    <h2>Selecione o curso: </h2>
+    <select [(ngModel)]="cursoSelected">
+        <option *ngFor="let curso of cursos" value={{curso.id}}>
+            {{curso.nome}}
+        </option>
+    </select>
+    <button (click)="cadastroAluno()">Confirmar</button>
+</div>
+
+<br>
+
+<div>
+    <h1>Lista de Alunos</h1>
+    <table>
+        <thead>
+            <th>Nome</th>
+            <th>Matricula</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let aluno of alunos">
+                <td>{{aluno.nome}}</td>
+                <td>{{aluno.matricula.matricula}}</td>
+                
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<button (click)="carregarAlunos()">Carregar Alunos</button>

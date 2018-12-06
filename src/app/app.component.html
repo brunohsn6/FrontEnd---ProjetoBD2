@@ -1,0 +1,45 @@
+<div>
+  <h1>Sistema de Gerência Escolar</h1>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a routerLink="/disciplina" class="nav-link">Disciplina <span class="sr-only">Disciplina</span></a>
+        </li>
+        <li class="nav-item">
+          <a  routerLink="/aluno" class="nav-link" href="#">Aluno</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/professor" class="nav-link" href="#">Professor</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/curso" class="nav-link" href="#">Curso</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/departamento" class="nav-link" href="#">Departamento</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/turma" class="nav-link" href="#">Turma</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/cadastrarTurma" class="nav-link" href="#">Gerenciar turma</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <!-- <button routerLink="/disciplina">Disciplina</button>
+  <button routerLink="/aluno">Aluno</button>
+  <button routerLink="/professor">Professor</button>
+  <button routerLink="/curso">Curso</button>
+  <button routerLink="/departamento">Departamento</button>
+  <button routerLink="/turma">Turma</button>-->
+  <router-outlet></router-outlet>
+
+</div>

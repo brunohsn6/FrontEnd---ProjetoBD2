@@ -1,0 +1,16 @@
+<h4>Aluno:</h4>
+<select  [(ngModel)]="alunoID">
+    <option  *ngFor="let al of alunos" value={{al.id}}>
+        {{al.nome}}
+    </option>
+</select>
+
+<h4>Turma:</h4>
+<select  [(ngModel)]="turmaID">
+    <option  *ngFor="let tur of turmas" value={{tur.id}}>
+        {{tur.codigo}}
+    </option>
+</select>
+
+
+<button (click)="atualizar()">atualizar turma</button>

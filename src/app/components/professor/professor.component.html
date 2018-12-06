@@ -1,0 +1,36 @@
+<br>
+<div>
+    <span>Nome: </span><input [(ngModel)]="nome" type="text">
+    <br>
+    <span>Matricula: </span><input [(ngModel)]="matricula" type="text">
+    <br>
+    <span>Departamento: </span>
+    <select  [(ngModel)]="departamentoID">
+        <option  *ngFor="let dept of departamentos" value={{dept.id}}>
+            {{dept.nome}}
+        </option>
+    </select>
+    <button (click)="cadastroProfessor()">Confirmar</button>
+  </div>
+
+  <br>
+
+<div>
+    <h1>Lista de Professores</h1>
+    <table>
+        <thead>
+                <th>Nome</th>
+                <th>Matricula</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let professor of professors">
+                    <td>{{professor.nome}}</td>
+                    <td>{{professor.matricula}}</td>
+                    
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<button (click)="carregarProfessor()">Carregar Professores</button>

@@ -1,0 +1,29 @@
+<br>
+<div>
+  <span>Nome: </span><input [(ngModel)]="nome" type="text">
+  <br>
+  <span>Código: </span><input [(ngModel)]="codigo" type="text">
+  <br>
+  <button (click)="cadastroDepartamento()">Confirmar</button>
+</div>
+
+<br>
+
+<div>
+  <h1>Lista de Departamentos</h1>
+  <table>
+      <thead>
+              <th>Nome</th>
+              <th>Departamento</th>
+      </thead>
+      <tbody>
+          <tr *ngFor="let dept of departamentos">
+                  <td>{{dept.nome}}</td>
+                  <td>{{dept.codigo}}</td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+<button (click)="carregarDepartamentos()">Carregar Departamentos</button>
+

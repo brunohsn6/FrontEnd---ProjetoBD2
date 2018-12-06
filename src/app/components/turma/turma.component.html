@@ -1,0 +1,44 @@
+<br>
+<div>
+    <span>Nome: </span><input [(ngModel)]="codigo" id="codigo" name="codigo" type="text">
+    <br>
+    <span>periodo: </span><input [(ngModel)]="periodo" id="periodo" name="periodo" type="text">
+    <br>
+    <span>ano: </span><input [(ngModel)]="ano" id="ano" name="ano" type="date">
+    <br>
+    <h2>Selecione a Disciplina: </h2>
+    <select [(ngModel)]="disciplinaSelected">
+        <option *ngFor="let disciplina of disciplinas" value={{disciplina.id}}>
+            {{disciplina.nome}}
+        </option>
+    </select>
+    <h2>Selecione o Professor: </h2>
+    <select [(ngModel)]="professorSelected">
+        <option *ngFor="let professor of professores" value={{professor.id}}>
+            {{professor.nome}}
+        </option>
+    </select>
+    <br><br><button (click)="cadastroTurma()">Confirmar</button>
+</div>
+
+<br>
+
+<div>
+    <h1>Lista de Alunos</h1>
+    <table>
+        <thead>
+            <th>Nome</th>
+            <th>Aluno</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let aluno of alunos">
+                <td>{{aluno.nome}}</td>
+                <td>{{mat}}</td>
+                <td>{{aluno.turma}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<button (click)="carregarAlunos()">Carregar Alunos</button>

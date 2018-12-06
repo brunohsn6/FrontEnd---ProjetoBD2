@@ -1,0 +1,50 @@
+<br>
+<div>
+    <span>Nome: </span><input [(ngModel)]="nome" type="text">
+    <br>
+    <span>Código: </span><input [(ngModel)]="codigo" type="text">
+    <br>
+    <span>Horas Obrigatorias: </span><input [(ngModel)]="horasObrigatorias" type="number">
+    <br>
+    <span>Carga Horaria: </span><input [(ngModel)]="cargaHoraria" type="number">
+    <br>
+    <span>Creditos: </span><input [(ngModel)]="creditos" type="number">
+    <h4>Departamento:</h4>
+    <select  [(ngModel)]="deptId">
+        <option  *ngFor="let dept of departamentos" value={{dept.id}}>
+            {{dept.nome}}
+        </option>
+    </select>
+    <button (click)="cadastroCurso()">Confirmar</button>
+</div>
+
+
+<br>
+
+<div>
+  <h1>Lista de Cursos</h1>
+  <table>
+      <thead>
+              <th>Nome </th>&nbsp;
+              <th>Codigo  </th>&nbsp;
+              <th>horas obrigatorias  </th>&nbsp;
+              <th>carga horaria  </th>&nbsp;
+              <th>creditos </th>&nbsp;
+              
+
+      </thead>
+      <tbody>
+          <tr *ngFor="let curso of cursos">
+                  <td>{{curso.nome}}</td>&nbsp;
+                  <td>{{curso.codigo}}</td>&nbsp;&nbsp;&nbsp;
+                  <td>{{curso.horasObrigatorias}}</td>&nbsp;
+                  <td>{{curso.cargaHoraria}}</td>&nbsp;
+                  <td>{{curso.creditos}}</td>&nbsp;
+          </tr>
+
+      </tbody>
+  </table>
+</div>
+
+<button (click)="carregarCursos()">Carregar Curso</button>
+

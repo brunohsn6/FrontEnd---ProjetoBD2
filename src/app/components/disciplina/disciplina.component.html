@@ -1,0 +1,30 @@
+<br>
+<div>
+    <span>Nome: </span><input [(ngModel)]="nome" id="nome" name="nome" type="text">
+    <br>
+    <span>Codigo: </span><input [(ngModel)]="codigo" id="codigo" name="codigo" type="text">
+    <br>
+    <button (click)="cadastroDisciplina()">Confirmar</button>
+
+</div>
+
+<br>
+
+<div>
+    <h1>Lista de Disciplinas</h1>
+    <table>
+        <thead>
+                <th>Nome</th>
+                <th>Codigo</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let disciplina of disciplinas">
+                    <td>{{disciplina.nome}}</td>
+                    <td>{{disciplina.codigo}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<button (click)="carregarDisciplinas()">Carregar Disciplinas</button>
